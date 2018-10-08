@@ -1,0 +1,38 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro de Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <h1> Cadastro de Clientes </h1>
+    <form>
+        <div>
+            <label for="clientName">Razão Social:</label>
+            <input id="clientName" name="clientName" type="text" placeholder="Jose da Silva ME" required name=clientName>
+            <!-- HTML5 Validator for empty inputs. code: required name=clientName -->
+        </div>
+        <div>
+            <label for="clientContact">Nome:</label>
+            <input id="clientContact" name="clientContact" type="text" placeholder="José da Silva" required name=clientContact>
+        </div>
+        <div>
+            <label for="clientDate">Data que se tornou cliente:</label>
+            <input id="clientDate" name="clientDate" type="date" id="clientDate" placeholder="10/10/2010" required name=clientDate>
+        </div>
+        <button id="save">Salvar </button>
+    </form>
+
+    <a href="index.html">Voltar para página inicial </a>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script src="../js/app.js"> </script>
+    <script src="../js/insert_customer.js"></script>
+</body>
+
+</html>

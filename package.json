@@ -1,0 +1,17 @@
+{
+  "name": "challenge-4-devs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/feliperodriguesxz/challenge-4-devs.git",
+  "keywords": [],
+  "author": "feliperodriguesxz <feliperodriguesxz@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feliperodriguesxz/challenge-4-devs/issues"
+  },
+  "homepage": "https://github.com/feliperodriguesxz/challenge-4-devs#readme"
+}

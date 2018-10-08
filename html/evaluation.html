@@ -1,6 +1,22 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCRIlX6zSoHDlrJdozA_eI1dCuxoTfWNN8",
+            authDomain: "challenge-4-devs.firebaseapp.com",
+            databaseURL: "https://challenge-4-devs.firebaseio.com",
+            projectId: "challenge-4-devs",
+            storageBucket: "challenge-4-devs.appspot.com",
+            messagingSenderId: "764592048564"
+          };
+          firebase.initializeApp(config);
+        </script>
+        
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cadastro de Avaliações</title>
@@ -8,7 +24,33 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
-    
+
+    <form>
+        1. Em uma escala de 0 a 10, 
+        qual a probabilidade de você recomendar nosso produto/serviço a um amigo/conhecido?<br>
+
+        <input type="radio" name="rating" value="0" checked> 0<br>
+        <input type="radio" name="rating" value="1"> 1<br>
+        <input type="radio" name="rating" value="2"> 2 <br>
+        <input type="radio" name="rating" value="3"> 3<br>
+        <input type="radio" name="rating" value="4"> 4<br>
+        <input type="radio" name="rating" value="5"> 5<br>
+        <input type="radio" name="rating" value="6"> 6<br>
+        <input type="radio" name="rating" value="7"> 7<br>
+        <input type="radio" name="rating" value="8"> 8<br>
+        <input type="radio" name="rating" value="9"> 9<br>
+        <input type="radio" name="rating" value="10"> 10<br>
+    </form>
+    <form>
+    <p>Qual é o motivo dessa nota?</p>
+    <input type="text">
+    </form>
+    <form>
+        Mês e ano de referência:
+        <input type="month" name="month-year">
+    </form>
 </body>
+
 </html>
