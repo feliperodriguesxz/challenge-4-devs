@@ -1,0 +1,38 @@
+{
+  "customers" : {
+  
+    "1" : {
+      "clientContact" : "jose da silva",
+      "clientDate" : "2018-10-01",
+      "clientName" : "jose"
+    },
+    "2" : {
+      "clientContact" : "cc",
+      "clientDate" : "2018-10-01",
+      "clientName" : "cc"
+    },
+    "3" : {
+      "clientContact" : "clientContact",
+      "clientDate" : "clientDate",
+      "clientName" : "clientName"
+    
+  }
+},
+
+  "customers2" : {
+    "-LOLLhRUwguFU79JwgRw" : {
+      "clientContact" : "c2",
+      "clientDate" : "2018-10-07",
+      "clientName" : "c2"
+    }
+},
+
+  "evaluations" : {
+    "-LOUI7YmLD_sZg4HNFdH" : {
+      "clientContact" : "evv",
+      "clientDate" : "2018-10-10",
+      "clientName" : "evv"
+    }
+  }
+}
+
