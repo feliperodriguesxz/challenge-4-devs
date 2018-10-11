@@ -1,0 +1,54 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Id: </td>
+            <td><input type="text" name="customerId" id="customerId" /></td>
+        </tr>
+        <tr>
+            <td>Customer Name: </td>
+            <td><input type="text" name="customerName" id="customerName" /></td>
+        </tr>
+        <tr>
+            <td>Customer Contact: </td>
+            <td><input type="text" name="customerContact" id="customerContact" /></td>
+        </tr>
+        <tr>
+            <td>Customer Date: </td>
+            <td><input type="text" name="customerDate" id="customerDate" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Salvar" onclick="saveCustomer();" />
+                <input type="button" value="Atualizar" onclick="updateCustomer();" />
+                <input type="button" value="Deletar" onclick="deleteCustomer();" />
+            </td>
+        </tr>
+    </table>
+
+    <h3>Lista de clientes</h3>
+
+    <table id="tableCustomers" border="1">
+        <tr>
+            <td>Id</td>
+            <td>Razão social</td>
+            <td>Nome</td>
+            <td>Data</td>
+        </tr>
+    </table>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script src="../js/app.js"> </script>
+<script src="../js/functions.js"></script>
+
+</html>
