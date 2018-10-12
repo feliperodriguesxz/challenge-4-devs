@@ -26,3 +26,20 @@ firebase.database().ref('evaluations').on('value', function (snapshot) {
        // evaluationList.appendChild(li);
     });
 });
+
+/*
+evaluations {
+
+    "reference" : "month-year",
+    "customers" : {idCustomer1, idCustomer2, etc}
+
+}
+
+customers {
+    ....
+    type: "detrator-promotor-neutro-null",
+    dateLastEvaluation : "month-year"
+
+
+}
+*/

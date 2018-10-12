@@ -14,20 +14,29 @@
     <h1> Cadastro de Clientes </h1>
     <form>
         <div>
-            <label for="clientName">Razão Social:</label>
-            <input id="clientName" name="clientName" type="text" placeholder="Jose da Silva ME" required name=clientName>
-            <!-- HTML5 Validator for empty inputs. code: required name=clientName -->
+            <label for="customerCompanyName">Razão Social:</label>
+            <input id="customerCompanyName" name="customerCompanyName" type="text" placeholder="Jose da Silva ME" required name=customerCompanyName>
+            <!-- HTML5 Validator for empty inputs. code: required name=customerCompanyName -->
         </div>
         <div>
-            <label for="clientContact">Nome:</label>
-            <input id="clientContact" name="clientContact" type="text" placeholder="José da Silva" required name=clientContact>
+            <label for="customerNameContact">Nome:</label>
+            <input id="customerNameContact" name="customerNameContact" type="text" placeholder="José da Silva" required name=customerNameContact>
         </div>
         <div>
-            <label for="clientDate">Data que se tornou cliente:</label>
-            <input id="clientDate" name="clientDate" type="date" id="clientDate" placeholder="10/10/2010" required name=clientDate>
+            <label for="customerDate">Data que se tornou cliente:</label>
+            <input id="customerDate" name="customerDate" type="date" id="customerDate" placeholder="10/10/2010" required name=customerDate>
         </div>
         <button id="save">Salvar </button>
     </form>
+
+    <table id="tableCustomers" border="1">
+        <tr>
+            <td>Id</td>
+            <td>Razão social</td>
+            <td>Nome</td>
+            <td>Data</td>
+        </tr>
+    </table>
 
     <a href="index.html">Voltar para página inicial </a>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>

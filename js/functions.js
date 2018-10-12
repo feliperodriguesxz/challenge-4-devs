@@ -10,12 +10,12 @@ databaseRef.once('value', function (snapshot) {
 
     var row = tableCustomers.insertRow(rowIndex);
     var cellCustomerId = row.insertCell(0);
-    var cellCustomerName = row.insertCell(1);
-    var cellCustomerContact = row.insertCell(2);
+    var cellcustomerCompanyName = row.insertCell(1);
+    var cellcustomerNameContact = row.insertCell(2);
     var cellCustomerDate = row.insertCell(3);
     cellCustomerId.appendChild(document.createTextNode(childKey));
-    cellCustomerName.appendChild(document.createTextNode(childData.customerName));
-    cellCustomerContact.appendChild(document.createTextNode(childData.customerContact));
+    cellcustomerCompanyName.appendChild(document.createTextNode(childData.customerCompanyName));
+    cellcustomerNameContact.appendChild(document.createTextNode(childData.customerNameContact));
     cellCustomerDate.appendChild(document.createTextNode(childData.customerDate));
 
     rowIndex = rowIndex + 1;
@@ -23,15 +23,15 @@ databaseRef.once('value', function (snapshot) {
 });
 
 function saveCustomer() {
-  var customerName = document.getElementById('customerName').value;
-  var customerContact = document.getElementById('customerContact').value;
+  var customerCompanyName = document.getElementById('customerCompanyName').value;
+  var customerNameContact = document.getElementById('customerNameContact').value;
   var customerDate = document.getElementById('customerDate').value;
   var customerId = firebase.database().ref().child('customers').push().key;
 
   var data = {
     customerId: customerId,
-    customerName: customerName,
-    customerContact: customerContact,
+    customerCompanyName: customerCompanyName,
+    customerNameContact: customerNameContact,
     customerDate: customerDate
 
   }
@@ -45,15 +45,15 @@ function saveCustomer() {
 }
 
 function updateCustomer() {
-  var customerName = document.getElementById('customerName').value;
+  var customerCompanyName = document.getElementById('customerCompanyName').value;
   var customerId = document.getElementById('customerId').value;
-  var customerContact = document.getElementById('customerContact').value;
+  var customerNameContact = document.getElementById('customerNameContact').value;
   var customerDate = document.getElementById('customerDate').value;
 
   var data = {
     customerId: customerId,
-    customerName: customerName,
-    customerContact: customerContact,
+    customerCompanyName: customerCompanyName,
+    customerNameContact: customerNameContact,
     customerDate: customerDate
   }
 
@@ -74,6 +74,22 @@ function deleteCustomer() {
   reloadPage();
 }
 
-function reloadPage() {
-  window.location.reload();
+function searchCustomerNameContact() {
+  var customerNameContact = document.getElementById('customerNameContact').value;
+
+  databaseRef.once('value', function (snapshot) {
+    snapshot.forEach(function (childSnapshot) {
+      var childData = childSnapshot.val();
+
+      if (customerNameContact == childData.customerNameContact) {
+        alert('Cliente ' + customerNameContact + ' encontrado! ');
+      } else {
+        alert('Cliente ' + customerNameContact + ' não encontrado!\n encontrado: ' + childData.customerNameContact);
+      }
+    });
+  });
 }
+
+
+
+
