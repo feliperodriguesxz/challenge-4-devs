@@ -26,13 +26,15 @@ function saveCustomer() {
   var customerCompanyName = document.getElementById('customerCompanyName').value;
   var customerNameContact = document.getElementById('customerNameContact').value;
   var customerDate = document.getElementById('customerDate').value;
+  var customerDateEvaluation = 0;
   var customerId = firebase.database().ref().child('customers').push().key;
 
   var data = {
     customerId: customerId,
     customerCompanyName: customerCompanyName,
     customerNameContact: customerNameContact,
-    customerDate: customerDate
+    customerDate: customerDate,
+    customerDateEvaluation, customerDateEvaluation
 
   }
 
@@ -83,6 +85,7 @@ function searchCustomerNameContact() {
 
       if (customerNameContact == childData.customerNameContact) {
         alert('Cliente ' + customerNameContact + ' encontrado! ');
+
       } else {
         alert('Cliente ' + customerNameContact + ' não encontrado!\n encontrado: ' + childData.customerNameContact);
       }
